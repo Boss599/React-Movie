@@ -14,14 +14,15 @@ export function App(){
        <Link to='/'>
         <h1 className={styles.title}>Movies</h1>
         </Link> 
-           <Link to="/">Home</Link> <br></br>
-           <Link to="/movie">Movie</Link>
+           <Link to="/"></Link> <br></br>
+           <Link to="/movie"></Link>
         </header>
         <main>
         <Switch>
-          <Route exact path="/movie"><MovieDetails /></Route>
+          <Route exact path="/movies/:movieId">
+          <MovieDetails /></Route>
           <Route exact path="/"><LandingPage/></Route>
-          <Route  path="/">404 no encontrado</Route>
+         
         </Switch>
         </main>
         </Router>
